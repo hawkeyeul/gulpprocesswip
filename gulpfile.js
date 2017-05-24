@@ -227,7 +227,7 @@ var stylesTask = function (options) {
         .pipe(gulp.dest(options.dest));
     }
     task();
-    gulp.watch(options.src, task);
+    gulp.watch(options.files, task);
   } else {
     console.log(options.file + ' building for production');
     gulp.src(options.files)
