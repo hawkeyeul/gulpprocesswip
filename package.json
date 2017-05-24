@@ -1,0 +1,41 @@
+{
+  "name": "react-app-boilerplate",
+  "version": "2.2.2",
+  "description": "React application boilerplate",
+  "author": "Christian Alfoni",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "glob": "^7.0.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^4.0.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-if": "^2.0.1",
+    "gulp-jasmine2-phantomjs": "^0.2.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "phantomjs-prebuilt": "^2.1.7",
+    "react-dom": "^15.0.2",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "gulp-rename": "^1.2.2",
+    "react": "^15.0.2",
+    "react-addons-test-utils": "^15.0.2",
+    "react-bootstrap": "^0.31.0",
+    "react-dom": "^15.0.2"
+  },
+  "scripts": {
+    "dev": "set NODE_ENV=development&& gulp",
+    "build": "NODE_ENV=production&& gulp deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
