@@ -1,14 +1,23 @@
 module.exports = function () {
+    var build = './dev/';
     var client = './src/client/';
+
+
     var clientApp = client + 'app/';
     var commonLibs = '../KiewitCommonLibrary/';
     var vendorLib = './node_modules/';
-    var temp = './.temp/';
-    var build = './build/';
+
+    //server settings
+    var envProd = './build/';
+    var envDev = './dev/';
+    var serverDefaultFile = 'index.html';
+    var serverPort = 7203;
+
+
 
     var config = {
         //files to process
-        react: [client+ 'app/**/*.jsx'],
+        react: [client + 'app/**/*.jsx'],
         index: [client + 'index.html'],
         appJS: [
             './src/**/*.js',
@@ -31,17 +40,25 @@ module.exports = function () {
         commonCSS: [
             commonLibs + 'styles/kiewit-theme-dark.css'
         ],
-        images:[
+        images: [
             client + 'images/**/*'
         ],
-        
+
         //folder location
         client: client,
-        clientApp: clientApp,
-        commonLibs: commonLibs,
-        temp: temp,
-        build: build
+        server: server,
+        build: build,
+
+
+        //server options
+        serverOptions: {
+            envDev: serverDev,
+            envProd: serverProd,
+            file: serverDefaultFile,
+            port: serverPort
+        }
+
     };
-    
+
     return config;
-};
+}
